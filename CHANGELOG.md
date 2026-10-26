@@ -12,3 +12,5 @@ No experiment settings, saved results, statistical definitions or submitted PDFs
 Previous repository state: `e8ceb7b9976dd77b9497218d687e232b01605f84`, retained as `pre-maintenance-2026-10-26`.
 
 - Renamed public protocol, control and notebook paths to descriptive experiment names; updated notebook-test paths and added a repository map. Legacy runtime identifiers remain compatible.
+
+- Organized `paper/` around the final exported PDF and its checksum; moved historical planning to `provenance/protocols/` and scripted controls to `results/controls/`.

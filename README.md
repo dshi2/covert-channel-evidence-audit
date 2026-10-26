@@ -4,6 +4,8 @@ A controlled evaluation of whether LLM auditors distinguish target recovery from
 
 The study evaluates evidence sufficiency under a declared mechanism class. It does not test discovery of unknown covert channels or establish real-world collusion.
 
+[Read the research report (PDF)](paper/report.pdf) · [Reproduce tables and figures](REPORTING.md)
+
 ## What this project contributes
 
 1. **Matched cases that separate recovery from dependence.** The used and ignored-but-matching mechanisms have identical public and decoder records, but different functional-dependence truths. A matching action and successful decoding therefore do not suffice to distinguish these mechanisms. This is a constructed property of the benchmark, not a discovery about real-world agents.
@@ -85,7 +87,8 @@ Use a stable copy of the run folders. `run_saved_report.py` hashes inputs before
 ## Repository layout
 
 ```text
-paper/       Evidence-audit protocol and scripted-control outputs
+paper/       Final report PDF, checksum and supporting-material index
+provenance/  Collection source snapshots and historical planning records
 notebooks/   evidence_audit.ipynb and results review
 sprint/      Case generation, collection and analysis modules
 scripts/     Offline controls, table builders and figure generators
