@@ -4,6 +4,14 @@ A controlled evaluation of whether LLM auditors distinguish target recovery from
 
 The study evaluates evidence sufficiency under a declared mechanism class. It does not test discovery of unknown covert channels or establish real-world collusion.
 
+## What this project contributes
+
+1. **Matched cases that separate recovery from dependence.** The used and ignored-but-matching mechanisms have identical public and decoder records, but different functional-dependence truths. A matching action and successful decoding therefore do not suffice to distinguish these mechanisms. This is a constructed property of the benchmark, not a discovery about real-world agents.
+2. **Evidence-specific reference judgments and controls.** Each case is shown under four views. Code grades recovery and local functional dependence as supported, contradicted or insufficient evidence according to the visible records. Independent enumeration and byte-identity checks validate the answer key and matched pairs.
+3. **An evaluation that measures both directions of unsupported conclusions.** Three completed model evaluations each contain 400 cases and two related judgments per case. We report unsupported positive and negative judgments, resolved accuracy, coverage and same-case baselines, with block-level uncertainty. Supplied-rule reasoning is the task; channel discovery is not.
+
+The contribution is the controlled test suite and its empirical evaluation. It is not a new secret channel, a general detector, or a claim of being the first evidence-sufficiency benchmark.
+
 ![Study design](figures/report2_evidence_audit_design.png)
 
 ## Results at a glance
@@ -18,9 +26,15 @@ The study evaluates evidence sufficiency under a declared mechanism class. It do
 
 Each complete model answered 400 cases, yielding two judgments per case in 20 matched blocks. The table reports raw counts; inference resamples blocks, not 800 independent judgments. All public-view reference labels are “insufficient evidence,” so that view tests abstention. The evidence-level-only baseline scores 566/800 judgments (70.75%); overall correctness alone is not the primary finding.
 
+**The principal finding is the direction of unsupported conclusions.** With one trial output hidden, Qwen asserted dependence in 8/36 ambiguous cases (mean within-block rate 21.6%, descriptive 95% interval [5.9%, 39.2%]). GPT-OSS asserted it in 0/36 but ruled it out without support in 6/36 (16.7%, [4.9%, 31.4%]). Qwen also made unsupported negatives in 4/36 cases. These are observed error profiles, not evidence of stable model-wide tendencies. [Metric counts and intervals](results/exports/metrics.csv).
+
+**Complete records were easier, but did not eliminate errors.** Correct dependence judgments were 100/100 for DeepSeek and Qwen and 96/100 for GPT-OSS. Recovery and dependence are separate outcomes; high dependence accuracy does not imply perfect recovery judgments.
+
+**Models exceeded the evidence-level-only baseline on the same non-public cases.** Observed gains ranged from 16 to 52 percentage points across views and judgments. The baseline is already perfect in the public view, where every reference label is insufficient evidence. These comparisons do not establish general audit competence. [Same-case baseline results](results/exports/same_case_baselines.csv).
+
 ![Direction of unsupported dependence judgments by evidence view](figures/results_summary.png)
 
-Points are mean within-block rates with descriptive 95% block-bootstrap intervals. Applicable ambiguous cases: 60 in the decoder view and 36 under partial execution; missing answers are not abstentions. Block-weighted rates can differ from the table's pooled fractions. Zero-width bootstrap intervals do not establish population certainty. Mistral's incomplete collection is documented in the protocol and retained separately from these completed-model comparisons.
+Points are mean within-block rates with descriptive 95% block-bootstrap intervals. Applicable ambiguous cases: 60 across 20 contributing blocks in the decoder view and 36 across 17 under partial execution. Public-view errors are reported in the metric export; complete evidence has no ambiguous dependence cases. Missing answers are not abstentions. Block-weighted rates can differ from pooled fractions, and zero-width intervals do not establish population certainty. Mistral's incomplete collection is retained separately from these completed-model comparisons.
 
 The table and result figure are generated from the bundled [verified exports](results/README.md). Rebuild them without API calls:
 
@@ -64,7 +78,7 @@ Use a stable copy of the run folders. `run_saved_report.py` hashes inputs before
 
 ## Source and shared infrastructure
 
-Author: **Drishti Sharma — Independent**. This standalone repository was exported from the committed sprint source recorded in `provenance/source.json`. The two paper releases retain the same tested shared `sprint` engine and compatibility modules; only the paper-specific launch notebooks are exposed. Shared reporting imports and their regression fixtures retain compatibility modules for the original source tree; these are not additional studies claimed by this paper. No uncommitted launcher edits, API credentials, live outputs or internal manuscript drafts are included.
+Author: **Drishti Sharma, Independent**. This standalone repository was exported from the committed sprint source recorded in `provenance/source.json`. The two paper releases retain the same tested shared `sprint` engine and compatibility modules; only the paper-specific launch notebooks are exposed. Shared reporting imports and their regression fixtures retain compatibility modules for the original source tree; these are not additional studies claimed by this paper. No uncommitted launcher edits, API credentials, live outputs or internal manuscript drafts are included.
 
 `provenance/collection-*.tar.gz` preserves source/config snapshots at the original collection pins. Extract these separately when inspecting the original collection code; the submission tag identifies the later reporting release. Do not resume existing journals with changed collection settings.
 
