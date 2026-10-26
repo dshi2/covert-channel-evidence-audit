@@ -87,4 +87,4 @@ Author: **Drishti Sharma, Independent**. Exported from the sprint source recorde
 
 The market model and prompts come from [the Apart starter](https://github.com/poseidon-research/collusion_hackathon), based on [algorithmic_pricing_llms](https://github.com/luciasauer/algorithmic_pricing_llms); it is fetched, not bundled, and keeps its own license. The code in this repository is released under the [MIT License](LICENSE).
 
-The evidence audit is called `covert` in code and configs, and its runs live in folders named `fallback2_*`; these names are stored in the run data.
+In the code and configs the evidence audit is called `covert`, and each run file records the experiment as `covert_audit`. The collection notebook saved runs to `runs/fallback2_v1`. These names are kept so the code matches the saved runs.
