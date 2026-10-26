@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-NOTEBOOK = Path(__file__).resolve().parents[1] / 'notebooks/fallback2.ipynb'
+NOTEBOOK = Path(__file__).resolve().parents[1] / 'notebooks/evidence_audit.ipynb'
 
 
 def cells():

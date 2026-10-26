@@ -1,8 +1,10 @@
-# Candidate F2: evidence requirements for auditing covert price signals
+# Execution-evidence audit: protocol
+
+> Historical collection protocol. The descriptive filename and heading were updated during repository cleanup; the original planning language, rules and command identifiers are retained below. Final results and documented collection deviations are reported in the paper and README.
 
 Implemented and validated offline. Approved for one bounded paid collection on its own key
 (`COLLUSION_F2_KEY`, non-resetting $10 limit; the notebook refuses a larger limit), separate from the main study's allowance; not preregistered. Replaces the abandoned
-board-safeguard idea; does not add another experiment. The targeted [literature review](fallback2_literature_review.md)
+board-safeguard idea; does not add another experiment. The targeted literature review (retained in the original sprint workspace)
 finds substantial overlap; the candidate contribution is evidence-appropriate attribution on matched
 cases, not a new covert-channel detector. Live feasibility and scientific value remain unverified.
 
@@ -125,7 +127,7 @@ auditor can refuse; scripted generation guarantees cases, not successful model r
   Reference auditor accuracy is 100%; evidence-level-only 70%, always-abstain 37.8125%, parallel-rise
   37.1875%, always-accuse 27.1875%. These are synthetic control results, not LLM results. A separate
   400-case scripted evaluation passes the actual journal → analysis route. Tables are in
-  `fallback2_controls/`; unit tests also inject interruptions, credit/authentication failure and refusal.
+  `evidence_audit_controls/`; unit tests also inject interruptions, credit/authentication failure and refusal.
 
 Full-evidence LLM mistakes remain reportable outcomes and constrain interpretation of lower-evidence
 mistakes; they are not an exclusion gate. The launch gate checks transport, parsing, provider and usage
