@@ -1,7 +1,8 @@
 # Release validation
 
-- Original research environment: 196 tests passed after removing unrelated launch notebooks and their notebook-specific tests.
-- Fresh Python 3.13 environment: 196 tests passed; Ruff passed for scripts, sprint and tests with the repository configuration. The documented install includes the pinned starter packages and scikit-learn for upstream prompt-equivalence tests.
+- After removing pricing-study code (2026-10-26): 132 tests passed and Ruff passed in the original research environment (Python 3.13.3).
+- Before that split: 196 tests passed in the original research environment.
+- Fresh Python 3.13 environment, before the split: 196 tests passed; Ruff passed for scripts, sprint and tests with the repository configuration. The documented install includes the pinned starter packages and scikit-learn for upstream prompt-equivalence tests.
 - Tables rebuilt from bundled judgment exports match the verified metrics, paired comparisons and baseline scores.
 - The README result figure and table regenerate from hash-checked included exports without model calls. Both result figures were visually inspected.
 - Notebook outputs are cleared and their ordinary Python cells compile. Live Colab execution of this release has not been claimed.

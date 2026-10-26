@@ -1,4 +1,4 @@
-"""Validate F2 labels by exhaustive compatible policies, independently of the reference auditor."""
+"""Validate evidence-audit labels by exhaustive compatible policies, independently of the reference auditor."""
 
 import argparse
 import itertools

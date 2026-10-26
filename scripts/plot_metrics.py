@@ -1,4 +1,4 @@
-"""Plot every F2 metric from the canonical summary CSV; no hardcoded models or results."""
+"""Plot every evidence-audit metric from the canonical summary CSV; no hardcoded models or results."""
 
 import argparse
 from pathlib import Path
@@ -48,7 +48,7 @@ def plot_metrics(source, out, label="Descriptive snapshot", selected_metrics=Non
                  ha="center", fontsize=9)
         fig.tight_layout(rect=(0, .08, 1, .92))
         for suffix in ("png", "pdf", "svg"):
-            fig.savefig(out / f"f2_metrics_{tag}.{suffix}", dpi=200, bbox_inches="tight")
+            fig.savefig(out / f"metrics_{tag}.{suffix}", dpi=200, bbox_inches="tight")
         plt.close(fig)
 
 

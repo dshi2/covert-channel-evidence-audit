@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from sprint import covert_analyze, study
+from sprint import covert_analyze
 from sprint.analyze import bootstrap_ci
 
 
@@ -13,7 +13,7 @@ def frame(records):
     return pd.DataFrame([base | r for r in records])
 
 
-def test_f2_ambiguous_only_and_equal_block_weight(monkeypatch):
+def test_ambiguous_only_and_equal_block_weight(monkeypatch):
     records = [{'block': 1, 'expected': 'insufficient_evidence', 'predicted': 'supported', 'correct': False}]
     records += [{'block': 2, 'expected': 'insufficient_evidence', 'predicted': 'insufficient_evidence', 'correct': True}] * 3
     records += [{'block': 2, 'expected': 'contradicted', 'predicted': 'supported', 'correct': False},
@@ -34,7 +34,7 @@ def test_f2_ambiguous_only_and_equal_block_weight(monkeypatch):
     assert result.loc['false_positive', 'numerator'] == 1
 
 
-def test_f2_paired_baseline_uses_same_cases_and_blocks(monkeypatch):
+def test_paired_baseline_uses_same_cases_and_blocks(monkeypatch):
     rows = []
     for view in ('public', 'decoder', 'complete'):
         for block, values in [(1, [(True, False)]), (2, [(False, True)] * 3)]:
@@ -62,14 +62,3 @@ def test_bootstrap_reproducible_percentiles_of_block_means():
         block_rates, size=(draws, 3)).mean(axis=1), [2.5, 97.5])
     assert bootstrap_ci(block_rates, n_boot=draws, seed=seed) == pytest.approx(expected)
 
-
-@pytest.mark.parametrize('n', [1, 4])
-def test_main_one_game_or_zero_variance_does_not_claim_certainty(n):
-    table = pd.DataFrame([{'run': 'r', 'setup': 's', 'model': 'm', 'status': 'eligible',
-                               'G10': 4., 'G01': 2., 'G11': 1.} for _ in range(n)])
-    result = study.primary(table, 'pooled').set_index('outcome')
-    assert (result.eligible == n).all()
-    assert result.loc['S_minus_J', 'mean'] == 2.
-    assert result.lo.isna().all() and result.hi.isna().all()
-    assert (result.interpretation == 'uncertainty unavailable').all()
-    assert (result.level == 1-.05/16).all()

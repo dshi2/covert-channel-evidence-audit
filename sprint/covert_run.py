@@ -1,4 +1,4 @@
-"""Independent F2 audit calls, using the reviewed transport and append-only resume journals."""
+"""Independent evidence-audit calls, using the reviewed transport and append-only resume journals."""
 
 import argparse
 import asyncio

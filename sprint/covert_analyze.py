@@ -1,4 +1,4 @@
-"""Evidence-specific F2 scores; base-case blocks, not repeated views, define uncertainty."""
+"""Evidence-specific audit scores; base-case blocks, not repeated views, define uncertainty."""
 
 import argparse
 import hashlib

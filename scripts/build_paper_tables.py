@@ -1,4 +1,4 @@
-"""Paper tables from a labelled snapshot of exported F2 judgments; no API calls."""
+"""Paper tables from a labelled snapshot of exported evidence-audit judgments; no API calls."""
 import argparse
 import hashlib
 import json
@@ -59,7 +59,7 @@ def build(inputs, out, label):
     short = {'deepseek/deepseek-v4.1-flash-1017':'DeepSeek', 'qwen/qwen3.8-flash':'Qwen',
              'openai/gpt-oss-120b':'GPT-OSS', 'mistralai/mistral-large-2512':'Mistral'}
     headers = ['View / judgment'] + [short.get(m,m) for m in models]
-    text = [f'# F2 tables — {label}',
+    text = [f'# Evidence-audit tables — {label}',
             'Snapshot of exported judgments, not a fresh raw-journal reconstruction. Reference labels and all four baseline predictions are checked against regenerated case records. Rates and intervals below are percentages; n/d gives the applicable raw numerator/denominator. Rates are means of within-block rates, with descriptive 95% block-bootstrap intervals. Zero-denominator metrics are not estimable. Degenerate intervals do not establish population certainty.']
     for metric in ('correct_per_planned_judgment', 'unsupported_positive', 'unsupported_negative', 'resolved_accuracy', 'answer_coverage'):
         rows = []
