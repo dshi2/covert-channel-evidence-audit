@@ -1,0 +1,31 @@
+{
+  "basis": "Verified saved analysis exports; not a fresh raw-journal rebuild.",
+  "transformation": "Only absolute run paths replaced with their final folder names; numeric fields unchanged.",
+  "files": {
+    "deepseek_judgments.csv": {
+      "source_export_sha256": "01fac265159c5d34d5bc433cb903fb79a02fc0e07388b5d324bf07aeef0671ce",
+      "bundled_sha256": "2d19552f0907c56cf4ed16c20d4b8668d7ccb4571957b19acd6e11b2bdd7de5f",
+      "rows": 800
+    },
+    "qwen_judgments.csv": {
+      "source_export_sha256": "aec8b5feb282ebe917df5e8fc6225ddf6710acf3b785b90a84b7a406d1f2b285",
+      "bundled_sha256": "6762ec32b2f2d4429ca9dc4453a48ba67ffed63dba344fe69adea6cf3c4c503b",
+      "rows": 800
+    },
+    "gptoss_judgments.csv": {
+      "source_export_sha256": "81059e5e5e90e0cb73d690bf99acb09bccfa896d04a13db636811db9412fbd0b",
+      "bundled_sha256": "819f938a24583af0ef99cafc91b43648f9231b0b96bf089e5a8a2a32f3801556",
+      "rows": 800
+    },
+    "metrics.csv": {
+      "source_export_sha256": "5b8552e13f9724a38403ccfcb39dcb17ec783b82d0b1d3e1f01ce07118c39929",
+      "bundled_sha256": "71d1b35d028944f05972181b435b6b26d3250a4ee2c29e7542786367ec0bd0b3",
+      "rows": 168
+    },
+    "same_case_baselines.csv": {
+      "source_export_sha256": "02c627ec9dc6ba8d74ab312cc11055e73912ff385c273d85192bca9d4903cb59",
+      "bundled_sha256": "cde76d138fc70bc3708b39afe39f97a86a61fd5f9017c1681eb55fe740d92554",
+      "rows": 96
+    }
+  }
+}

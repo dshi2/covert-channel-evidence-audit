@@ -1,0 +1,12 @@
+{
+  "cases": 160,
+  "independent_labels_passed": true,
+  "matched_pairs_passed": true,
+  "baseline_accuracy": {
+    "always_abstain": 0.378125,
+    "always_accuse": 0.271875,
+    "evidence_level_only": 0.7,
+    "parallel_rise": 0.371875,
+    "reference": 1.0
+  }
+}

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite the paper and the exact code release used."
+type: software
+title: "Evidence sufficiency for covert-channel attribution"
+authors:
+  - family-names: Sharma
+    given-names: Drishti
+    affiliation: Independent
+repository-code: "https://github.com/dshi2/covert-channel-evidence-audit"
+version: 0.1.0
