@@ -106,3 +106,5 @@ Author: **Drishti Sharma, Independent**. This standalone repository was exported
 `provenance/collection-*.tar.gz` preserves source/config snapshots at the original collection pins. Extract these separately when inspecting the original collection code; the repository history identifies the later reporting release. Do not resume existing journals with changed collection settings.
 
 The pinned market functions and prompt text are fetched from [the Apart starter](https://github.com/poseidon-research/collusion_hackathon), which incorporates [algorithmic_pricing_llms](https://github.com/luciasauer/algorithmic_pricing_llms). Upstream code is not vendored here. Follow upstream license terms. A license grant for the newly authored code has not yet been selected.
+
+Code names: files and modules keep the sprint's working names so the code matches the archived runs. The evidence audit is `covert` in code (`sprint/covert*.py`, `configs/covert_*.toml`) and `fallback2` in run folders.

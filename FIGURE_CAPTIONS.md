@@ -1,6 +1,6 @@
 # Design figure caption
 
-## Report 2 — F2
+## Evidence-sufficiency audit
 
 File: `report2_evidence_audit_design.png` (also PDF and SVG).
 
