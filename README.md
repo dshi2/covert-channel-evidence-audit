@@ -6,6 +6,8 @@ Can an LLM auditor tell whether a hidden signal was merely recoverable from a se
 
 ![Study design](figures/report2_evidence_audit_design.png)
 
+**Figure 1.** *Design of the evidence audit. Each of 20 blocks contains five scripted sender–recipient mechanisms. Each case is shown to the auditor in four views that add evidence step by step: public prices and actions, the recipient's decoding record, some of the policy trials, and all of them. The auditor judges separately whether the target was recovered and whether the action depended on it, and is graded against what the shown records establish. The key test is a matched pair with identical decoder records: one policy uses the signal and the other ignores it but happens to match, so only the complete trials can tell them apart.*
+
 ## Results
 
 <!-- RESULTS:START -->
@@ -23,6 +25,8 @@ Can an LLM auditor tell whether a hidden signal was merely recoverable from a se
 Counts are raw; intervals resample matched blocks, not individual judgments.
 
 ![Results](figures/results_summary.png)
+
+**Figure 2.** *How often each model drew a dependence conclusion the evidence did not support, in ambiguous cases where the correct answer was "not enough evidence". The left panel shows unsupported claims that the action depended on the signal; the right panel shows unsupported claims that it did not. Points are mean error rates within matched blocks, with 95% intervals. With partial trials, Qwen over-claimed dependence most often (21.6%), while GPT-OSS never over-claimed but most often ruled dependence out without support (16.7%). The public view is not shown, and the complete view has no ambiguous cases.*
 
 Metrics and intervals are in [results/exports](results/README.md). Rebuild the table and figure with `python -m scripts.build_readme_results` (no API calls).
 
