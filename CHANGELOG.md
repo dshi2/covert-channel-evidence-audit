@@ -1,21 +1,10 @@
 # Change log
 
-## 2026-10-26: documentation maintenance
+All changes below were made after the submission deadline (26 October 2026, 11:59 UTC). The submitted version is tagged `pre-maintenance-2026-10-26` (commit `e8ceb7b`). None of them changes experiment settings, saved results, statistical definitions or the report.
 
-- Updated the report-to-script map to reflect the final table numbering and prose accounting.
-- Identified the generator for the combined results figure separately from supplementary diagnostic panels.
-- Clarified bundled-export reproduction versus raw-journal analysis and new paid collection.
-- Aligned the README title with the final evidence-sufficiency report.
+## 26 October 2026
 
-- Matched the citation titles to the reports, set the minimum Python version to 3.12 removed figure-drafting notes and added the MIT License.
-- Removed the pricing-study files from the collection snapshot and the source file list; the remaining snapshot files are unchanged.
-
-No experiment settings, saved results, statistical definitions or submitted PDFs were changed.
-
-Previous repository state: `e8ceb7b9976dd77b9497218d687e232b01605f84`, retained as `pre-maintenance-2026-10-26`.
-
-- Renamed public protocol, control and notebook paths to descriptive experiment names; updated notebook-test paths and added a repository map. Legacy runtime identifiers remain compatible.
-
-- Removed code, configurations, tests and a review notebook used only by the pricing study, and renamed `build_f2_paper_tables.py` and `plot_f2_metrics.py` to `build_paper_tables.py` and `plot_metrics.py`. The README table and bundled exports regenerate unchanged.
-
-- Organized `paper/` around the final exported PDF and its checksum; moved historical planning to `provenance/protocols/` and scripted controls to `results/controls/`.
+- Organised `paper/` around the final report PDF and its checksum; moved the pre-collection protocol to `provenance/protocols/` and the scripted control results to `results/controls/`.
+- Removed the code, configs, tests and review notebook used only by the pricing study, including from the collection snapshot and the source file list. Renamed two report scripts to `build_paper_tables.py` and `plot_metrics.py`.
+- Rewrote the README and the reproduction guide, matched the guide to the report's tables and figures, and added figure captions and a statement of what is new.
+- Matched the citation title to the report, set the minimum Python version to 3.12, removed figure-drafting notes and added the MIT License.

@@ -1,6 +1,6 @@
 # Historical protocol records
 
-These files preserve planning and pre-collection decisions. They can contain superseded scope, runtime-status statements and references to the original sprint workspace. They must not be used as a description of the final completed evaluation.
+These files record plans made before data collection. Some of their scope, status notes and file paths are out of date; the final report describes what was actually run.
 
 The final report is [paper/report.pdf](../../paper/report.pdf). Collection deviations are described there; final numerical exports are under [results/exports](../../results/exports/).
 

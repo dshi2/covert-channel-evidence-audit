@@ -28,7 +28,7 @@ Counts are raw; intervals resample matched blocks, not individual judgments.
 
 **Figure 2.** *How often each model drew a dependence conclusion the evidence did not support, in ambiguous cases where the correct answer was "not enough evidence". The left panel shows unsupported claims that the action depended on the signal; the right panel shows unsupported claims that it did not. Points are mean error rates within matched blocks, with 95% intervals. With partial trials, Qwen over-claimed dependence most often (21.6%), while GPT-OSS never over-claimed but most often ruled dependence out without support (16.7%). The public view is not shown, and the complete view has no ambiguous cases.*
 
-Metrics and intervals are in [results/exports](results/README.md). Rebuild the table and figure with `python -m scripts.build_readme_results` (no API calls).
+Metrics and intervals are in [results/exports](results/exports/) ([what these files are](results/README.md)). Rebuild the table and figure with `python -m scripts.build_readme_results` (no API calls).
 
 ## Install and test
 
@@ -48,13 +48,13 @@ python -m pytest -q
 
 ```bash
 python -m scripts.check_covert_controls --out reports/controls
-python -m scripts.run_saved_report data/recovery/deepseek41 data/recovery/qwen38 data/recovery/gptoss120 --out reports/recovery
-python -m scripts.build_paper_tables reports/recovery/tables/judgments.csv --out reports/paper-tables
-python -m scripts.plot_metrics reports/recovery/tables/summary.csv --out reports/primary-panels --metrics unsupported_positive resolved_accuracy
+python -m scripts.run_saved_report data/evidence/deepseek41 data/evidence/qwen38 data/evidence/gptoss120 --out reports/evidence
+python -m scripts.build_paper_tables reports/evidence/tables/judgments.csv --out reports/paper-tables
+python -m scripts.plot_metrics reports/evidence/tables/summary.csv --out reports/primary-panels --metrics unsupported_positive resolved_accuracy
 python -m scripts.build_paper_diagrams --out reports/designs
 ```
 
-Each data folder holds one model's `manifest.json` and `case_*.jsonl` journals. The raw run archive is not bundled yet. Mistral's incomplete run is analysed separately. These commands make no model calls.
+Each `data/...` path is one model's saved run folder with its `manifest.json` and `case_*.jsonl` journals. The raw journals are not included in this repository, so these commands need a copy of them. Mistral did not finish its 400 cases, so its run is analysed on its own and left out of the comparisons above. The commands make no model calls.
 
 ## Layout
 
@@ -83,7 +83,7 @@ The version submitted with the report is tagged [`pre-maintenance-2026-10-26`](h
 
 ## Source
 
-Author: **Drishti Sharma, Independent**. Exported from the sprint source recorded in `provenance/source.json`. The companion paper's code is in [llm-pricing-deterrence-audit](https://github.com/dshi2/llm-pricing-deterrence-audit).
+Author: **Drishti Sharma, Independent**. `provenance/source.json` records the sprint source commit and the hash of every file in this release. The companion paper's code is in [llm-pricing-deterrence-audit](https://github.com/dshi2/llm-pricing-deterrence-audit).
 
 The market model and prompts come from [the Apart starter](https://github.com/poseidon-research/collusion_hackathon), based on [algorithmic_pricing_llms](https://github.com/luciasauer/algorithmic_pricing_llms); it is fetched, not bundled, and keeps its own license. The code in this repository is released under the [MIT License](LICENSE).
 

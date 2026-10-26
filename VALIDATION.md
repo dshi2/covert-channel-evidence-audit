@@ -1,13 +1,13 @@
 # Release validation
 
-- Fresh clone from GitHub, installed with the README steps (2026-10-26): 132 tests passed on Python 3.12 and 3.13; Ruff passed; every script's `--help` runs. Python 3.11 is not supported because the pinned NumPy needs 3.12.
-- After removing pricing-study code (2026-10-26): 132 tests passed and Ruff passed in the original research environment (Python 3.13.3).
-- Before that split: 196 tests passed in the original research environment.
-- Fresh Python 3.13 environment, before the split: 196 tests passed; Ruff passed for scripts, sprint and tests with the repository configuration. The documented install includes the pinned starter packages and scikit-learn for upstream prompt-equivalence tests.
-- Tables rebuilt from bundled judgment exports match the verified metrics, paired comparisons and baseline scores.
-- The README result figure and table regenerate from hash-checked included exports without model calls. Both result figures were visually inspected.
-- Notebook outputs are cleared and their ordinary Python cells compile. Live Colab execution of this release has not been claimed.
-- Credential-pattern scan covers release files and archived collection source; raw journals and credentials are not included.
-- Full raw-journal-to-paper reproduction remains pending the complete frozen raw dataset. This release provides export-to-table/figure reproduction, not a claim that missing raw data is bundled.
+Checks run on this release:
 
-Remote CI results will appear in the repository Actions tab after upload.
+- Fresh clone from GitHub, installed with the README steps (26 October 2026): 132 tests pass on Python 3.12 and 3.13, Ruff passes, and every script's `--help` runs. Python 3.11 is not supported because the pinned NumPy needs 3.12.
+- GitHub Actions installs the repository and runs the tests, Ruff and the README results rebuild on every push.
+- The README table and results figure rebuild from the hash-checked files in `results/exports/` without model calls.
+- Tables rebuilt from the bundled judgment files match the reported metrics, paired comparisons and baseline scores.
+- Notebook outputs are cleared and their Python cells compile. The notebooks have not been rerun in Colab for this release.
+- A scan for credential patterns found none in the release files or the archived collection source.
+- The report has not been rebuilt here from raw journals, because the raw journals are not included.
+
+Before the pricing-study code was moved to its own repository, the combined code passed 196 tests.
