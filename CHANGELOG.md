@@ -8,6 +8,7 @@
 - Aligned the README title with the final evidence-sufficiency report.
 
 - Matched the citation titles to the reports, set the minimum Python version to 3.12 removed figure-drafting notes and added the MIT License.
+- Removed the pricing-study files from the collection snapshot and the source file list; the remaining snapshot files are unchanged.
 
 No experiment settings, saved results, statistical definitions or submitted PDFs were changed.
 
