@@ -28,6 +28,8 @@ Metrics and intervals are in [results/exports](results/README.md). Rebuild the t
 
 ## Install and test
 
+Requires Python 3.12 or newer.
+
 ```bash
 git clone https://github.com/dshi2/covert-channel-evidence-audit.git
 cd covert-channel-evidence-audit
@@ -67,6 +69,6 @@ tests/       Tests
 
 Author: **Drishti Sharma, Independent**. Exported from the sprint source recorded in `provenance/source.json`. The companion paper's code is in [llm-pricing-deterrence-audit](https://github.com/dshi2/llm-pricing-deterrence-audit).
 
-The market model and prompts come from [the Apart starter](https://github.com/poseidon-research/collusion_hackathon), based on [algorithmic_pricing_llms](https://github.com/luciasauer/algorithmic_pricing_llms); it is fetched, not vendored. A license for the new code has not been chosen yet.
+The market model and prompts come from [the Apart starter](https://github.com/poseidon-research/collusion_hackathon), based on [algorithmic_pricing_llms](https://github.com/luciasauer/algorithmic_pricing_llms); it is fetched, not bundled, and keeps its own license. The code in this repository is released under the [MIT License](LICENSE).
 
 The evidence audit is called `covert` in code and configs, and its runs live in folders named `fallback2_*`; these names are stored in the run data.

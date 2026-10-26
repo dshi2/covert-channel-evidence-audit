@@ -7,6 +7,8 @@
 - Clarified bundled-export reproduction versus raw-journal analysis and new paid collection.
 - Aligned the README title with the final evidence-sufficiency report.
 
+- Matched the citation titles to the reports, set the minimum Python version to 3.12 removed figure-drafting notes and added the MIT License.
+
 No experiment settings, saved results, statistical definitions or submitted PDFs were changed.
 
 Previous repository state: `e8ceb7b9976dd77b9497218d687e232b01605f84`, retained as `pre-maintenance-2026-10-26`.
