@@ -8,11 +8,13 @@ Manuscript numbering can change during layout; the content and source columns id
 
 | Paper item | Command / source | Output / assembly |
 |---|---|---|
-| Table 1: collection accounting | F2 report commands plus original-cap snapshot and attempt/launch records | `tables/cases.csv`, `tables/accounting.csv`; count each case once, not once per question. Budgets, failures and original-cap/recovery history require explicit reconciliation, not just a final count. |
-| Table 2: correctness by evidence view | `scripts.build_f2_paper_tables …` | `PAPER_TABLES.md` correctness section and `metrics.csv`; preserve planned denominators and block-based intervals. |
-| Table 3: primary dependence metrics and same-case baselines | Same F2 table command | `metrics.csv`, `same_case_comparisons.csv`, `same_case_baseline_scores.csv`; select the `dependent` question and named metrics/views. Raw numerator/denominator and mean within-block rate are distinct quantities. |
-| primary result figure | `scripts.plot_f2_metrics … --metrics unsupported_positive resolved_accuracy` | `f2_metrics_{tag}.png/.pdf/.svg`; use matching `summary.csv`, show applicable denominators, and keep all-metric sheets in the supplement. |
+| §4.1: collection accounting (prose) | F2 report commands plus original-cap snapshot and attempt/launch records | `tables/cases.csv`, `tables/accounting.csv`; count each case once, not once per question. Budgets, failures and original-cap/recovery history require explicit reconciliation, not just a final count. |
+| Table 1: correctness by evidence view | `scripts.build_f2_paper_tables …` | `PAPER_TABLES.md` correctness section and `metrics.csv`; preserve planned denominators and block-based intervals. |
+| Table 2: primary dependence metrics and same-case baselines | Same F2 table command | `metrics.csv`, `same_case_comparisons.csv`, `same_case_baseline_scores.csv`; select the `dependent` question and named metrics/views. Raw numerator/denominator and mean within-block rate are distinct quantities. |
+| Supplementary per-model metric panels | `scripts.plot_f2_metrics … --metrics unsupported_positive resolved_accuracy` | `f2_metrics_{tag}.png/.pdf/.svg`; use matching `summary.csv`, show applicable denominators, and keep all-metric sheets in the supplement. |
 | Figure 1: experimental design | `python -m scripts.build_paper_diagrams --out reports/designs` | `report2_evidence_audit_design.png`, PDF and SVG; select this paper’s design. |
+
+| Figure 2: unsupported positive and negative dependence judgments | `python -m scripts.build_readme_results` | `figures/results_summary.png` and `.svg`, from bundled `metrics.csv`; preserves within-block means and intervals. |
 
 ## Verification and provenance
 

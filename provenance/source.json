@@ -116,8 +116,8 @@
     "CITATION.cff": "d036d183b717733b66bed833a275d4d4391f29897f2909284ce3c4b7c2b7bfc2",
     "FIGURE_CAPTIONS.md": "7aec0b6ed910cf912c2be200584b523719bbb6063d1576c7b5787a232d30edce",
     "PAPER_FIGURE_PLAN.md": "ed76d9c7d7e73371901195cfe335a230e419c35edca7c151e5d7a3a3fb8b29c9",
-    "README.md": "04077199e3bc1f2c99e5ec2b8c4a3386034431b8bb50030f1b523944af9c1344",
-    "REPORTING.md": "6cecb632092332f1c043bde7f8f6348a72894ab3958d4e1abb47bb951076b6ca",
+    "README.md": "14c13d3a0b4479ad559fabb1243531102e4919ad35f3a63860ba416744bcae8d",
+    "REPORTING.md": "cebb5f417ebe71a06fa9c077a0aa9a8884617173e1a3ac65a8647b6fb3b55cba",
     "VALIDATION.md": "d92765308ed9e6980b93b33fd9fe8d6afbb8ae8dbe24f83f7d450a259c35cedb",
     "configs/canary_deepseek.toml": "d4c10b72fb2c20255f81ec9aa519e34def6f4268332f917c904bd7863b7d5ebc",
     "configs/canary_deepseek31.toml": "453f3849369fbcb1b811fae96a51e973643489179cce024f0a002e73a818808e",
@@ -220,6 +220,7 @@
     "tests/test_reporting_statistics.py": "aa7de84b05541a0a5843ed2d08d790d52655805850a5f15f6f4589a6c031d3fb",
     "tests/test_run.py": "17e8eacc999860e77c909880f9d9533e12e60a6c867746241075fc116825ae87",
     "tests/test_saved_report.py": "e3e4a28fcc0856d6b7fb8a473d9a3434d21165979b6e92e73ff5d61d344311d8",
-    "tests/test_study_trends.py": "8975cc08b6e3a5d0dd175b35bc7a6cfbfec5b9c9f9f6c3990eaff72a23ec19b3"
+    "tests/test_study_trends.py": "8975cc08b6e3a5d0dd175b35bc7a6cfbfec5b9c9f9f6c3990eaff72a23ec19b3",
+    "CHANGELOG.md": "ca9ae50032d9e235ada388d01641dc866a0f73a45e75ce245e07bb2db8db6d88"
   }
 }
